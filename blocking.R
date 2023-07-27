@@ -175,7 +175,7 @@ train %>%
 
 
 
-### BASELINE MODEL ####
+#### BASELINE MODEL ####
 
 
 
@@ -679,3 +679,4 @@ filter(playersDat, name == "Freddy Fermin") %>%
   theme(plot.subtitle = element_text(family = "serif", face = "bold", hjust = 0.5),
         plot.caption = element_text(family = "serif", hjust = 0.5),
         plot.title = element_text(family = "serif", face = "bold", hjust = 0.5))
+
