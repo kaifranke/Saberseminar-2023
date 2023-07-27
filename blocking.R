@@ -284,7 +284,7 @@ for (i in 1:length(nrounds)) {
         
         set.seed(1)
         
-        modLoop = xgboost(data = data.matrix(train[,1:7]),
+        modLoop = xgboost(data = data.matrix(train[,1:9]),
                           label = train$blocked,
                           nrounds = nrounds[i],
                           eta = eta[j],
@@ -294,7 +294,7 @@ for (i in 1:length(nrounds)) {
                           colsample_bytree = colsample_bytree,
                           objective = "binary:logistic")
         
-        predIt = predict(modLoop, newdata = data.matrix(test[,1:7]))
+        predIt = predict(modLoop, newdata = data.matrix(test[,1:9]))
         
         results[it, 1] = nrounds[i]
         results[it, 2] = eta[j]
@@ -336,7 +336,7 @@ for (i in 1:length(nrounds)) {
 
 
 set.seed(1)
-mod = xgboost(data = data.matrix(train[,1:7]),
+mod = xgboost(data = data.matrix(train[,1:9]),
               label = train$blocked,
               nrounds = 500,
               eta = .05,
@@ -348,7 +348,7 @@ mod = xgboost(data = data.matrix(train[,1:7]),
               subsample = 1,
               objective = "binary:logistic")
 
-modPred = predict(mod, newdata = data.matrix(test[,1:7]))
+modPred = predict(mod, newdata = data.matrix(test[,1:9]))
 
 fin = cbind(test, modPred)
 
@@ -517,7 +517,7 @@ modDat2023 = all2023 %>%
 
 
 
-pred2023 = predict(mod, newdata = data.matrix(modDat2023[,1:7]))
+pred2023 = predict(mod, newdata = data.matrix(modDat2023[,1:9]))
 
 LogLoss(pred2023, modDat2023$blocked)
 AUC(pred2023, modDat2023$blocked)
