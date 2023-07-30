@@ -2,6 +2,7 @@
 Kai Franke and Jack Rogers' Saberseminar 2023 project about catcher blocking with all of the code and data.
 
 blocking.R has all of the code that created everything in our model and research. It includes data scraping, manipulation, cleaning, modeling, and analysis. There are 6 sections in our code.
+blockingleaderboard.R includes code to make a leaderboard with data created in blocking.R
 
 * Data Preparation
   * All of the data preparation including scraping the 2022 data for training and making it so that the data is usable to be able to feed into the XGBoost algorithm
