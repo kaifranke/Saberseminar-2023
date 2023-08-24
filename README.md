@@ -16,3 +16,6 @@ blockingleaderboard.R includes code to make a leaderboard with data created in b
   * Getting 2023 data to test on and ensure the model continues doing well with new data. Also being able to do some analysis on the 2023 season thus far.
 * Player Development
   * We looked at Freddy Fermin to see how well he was doing and where there was room for improvement. Used stat_summary_2d to make a heatmap for both xBlock% and BAX 
+
+
+9-Rogers-Franke (UPDATED) (2).pdf is the presentation from Saberseminar on Saturday, August 12th, 2023
